@@ -32,7 +32,8 @@ public class AndroidFastRenderView extends SurfaceView implements Runnable {
         while(running) {  
             if(!holder.getSurface().isValid())
                 continue;           
-            
+
+            // seconds since last loop
             float deltaTime = (System.nanoTime()-startTime) / 1000000000.0f;
             startTime = System.nanoTime();
 
